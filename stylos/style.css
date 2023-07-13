@@ -1,0 +1,331 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #F6F6F6;
+	font-family: Poppins;
+}
+
+a {
+	text-decoration: none;
+}
+
+/**** NAVBAR ***/
+
+.navbar {
+	width: 100%;
+	background: black;
+	display: flex;
+	flex-direction: column;
+}
+
+.navSuperior {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar img {
+	width: 10%;
+}
+
+.store-bebidas {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.categoria_listado {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.categoria_bebida {
+	display: block;
+	font-size: 1rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	padding: 0.3rem;
+	background: black;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	transition: all .4s;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.categoria_listado a {
+	text-align: center;
+}
+
+.categoria_listado .ct_filtro-active {
+	color: #F6F1F1;
+	background: black;
+	border: 1px solid white;
+}
+
+
+.wrap {
+	width: 100%;
+	margin: auto;
+}
+
+
+.carritoNumero {
+	display: flex;
+	flex-direction: row;
+}
+
+.cantidadCarrito {
+	color: white;
+	font-size: 1.5rem;
+}
+
+
+
+
+.contenedorBebidas,
+.carrito {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 8rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.cardBebidas {
+	width: 15rem;
+	padding: .5rem .5rem;
+	margin: 1rem;
+	margin-top: 3rem;
+	background-color: #F6F6F6;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.9rem;
+	box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.69);
+}
+
+.cardBebidas img {
+	width: 100%;
+	margin-bottom: 0.7rem;
+}
+
+.buscador {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 2.5rem;
+}
+
+.buscador input {
+	padding: 10px 5px;
+	border: #F6F1F1 solid thin;
+	border-radius: 5px;
+	outline: none;
+	width: 20rem;
+	height: 2.5rem;
+}
+
+.buscador button {
+	margin-left: 10px;
+	margin-top: 0.5rem;
+	padding: 10px 5px;
+	background: black;
+	color: #F6F1F1;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 1rem;
+	width: 4rem;
+	height: 2.5rem
+}
+
+.nombre {
+	color: #146C94;
+	font-size: 1rem;
+	margin-left: 1rem;
+	margin-bottom: 0.1em;
+}
+
+.precio,
+.cantidad,
+.subtotal {
+	font-size: 1.1rem;
+	margin-left: 1rem;
+}
+
+.categoria {
+	font-size: 0.7rem;
+	margin-left: 1rem;
+	margin-bottom: 0.2rem;
+}
+
+.agregarAlCarrito,
+.eliminardelcarrito {
+	font-size: 0.9rem;
+}
+
+button {
+	appearance: none;
+	background-color: transparent;
+	border: 0.125em solid #1A1A1A;
+	border-radius: 0.9375em;
+	box-sizing: border-box;
+	color: #3B3B3B;
+	cursor: pointer;
+	display: inline-block;
+	font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 12px;
+	font-weight: 300;
+	line-height: normal;
+	margin: 0;
+	min-height: 0.5em;
+	min-width: 0;
+	outline: none;
+	padding: 0.3em 1em;
+	text-align: center;
+	text-decoration: none;
+	transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	will-change: transform;
+	margin-top: 0.5rem;
+}
+
+button:disabled {
+	pointer-events: none;
+}
+
+button:hover {
+	color: #fff;
+	background-color: #1A1A1A;
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	transform: translateY(-2px);
+}
+
+button:active {
+	box-shadow: none;
+	transform: translateY(0);
+}
+
+.carrito .card {
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-auto-rows: 1fr;
+	grid-template-columns: 17% 17% 17% 17% 17% 15%;
+	grid-template-rows: min-content;
+	gap: 0px 0px;
+	grid-template-areas:
+		"imagen nombre precio cantidad subtotal eliminardelcarrito";
+	align-items: center;
+	margin-top: 1rem;
+	justify-content: center;
+	box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.69);
+	padding: 0.5rem;
+	width: 100%;
+}
+
+.imagen {
+	grid-area: imagen;
+	width: 30%;
+	margin-left: 3rem;
+}
+
+.nombre {
+	grid-area: nombre;
+}
+
+.precio {
+	grid-area: precio;
+}
+
+.cantidad {
+	grid-area: cantidad;
+}
+
+.subtotal {
+	grid-area: subtotal;
+}
+
+.eliminardelcarrito {
+	grid-area: eliminardelcarrito;
+	margin-right: 3rem;
+}
+
+.id {
+	display: none;
+}
+
+.logo {
+	margin-right: 3rem;
+}
+
+.totalCompra {
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	width: 100%;
+	align-items: flex-end;
+	margin-right: 25rem;
+}
+
+.vaciarCarrito,
+.continuarCompra {
+	width: 15%;
+	height: 2rem;
+	font-size: 0.9rem;
+}
+
+.vaciarCarrito:hover {
+	color: #fff;
+	background-color: #e80707;
+	box-shadow: rgba(216, 14, 14, 0.25) 0 8px 15px;
+	border: 1px solid #e80707;
+	transform: translateY(-2px);
+}
+
+.continuarCompra:hover {
+	color: #fff;
+	background-color: #21be34;
+	box-shadow: rgba(51, 216, 14, 0.25) 0 8px 15px;
+	border: 1px solid #21be34;
+	transform: translateY(-2px);
+}
+
+.page404 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.imagenPage404 {
+	align-items: center;
+	filter: blur(4px);
+}
+
+
+.tituloPage404 {
+	position: absolute;
+	justify-content: center;
+	color: aliceblue;
+	text-align: center;
+	font-size: 2rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.carritoTitulo {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: center;
+	margin-bottom: 2rem;
+	background-color: black;
+	color: white;
+}
