@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>.16 Bebidas</title>
+
+    <title>.16 | Carrito </title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/fondoblanco.jpg" />
+    <link rel="icon" type="image/x-icon" href="../assets/fondoblanco.jpg" />
 
     <!-- Etiquetas meta -->
     <meta name="description"
-        content="Ecommerce Tienda de bebidas .16">
+        content="Ecommerce de Tienda de bebidas .16">
     <meta name="keywords"
         content="Bebidas, drinks, vino, gin, whisky, cerveza, vodka, gaseosas, sabado, .16, punto16, tienda de bebidas, tienda online">
     <meta name="author" content="Yanina Gabriela Vilte" />
     <meta name="copyright" content="Yanina Gabriela Vilte" />
 
     <meta property="og:title" content="Ecommerce Tienda de bebidas .16" />
-    <meta property="og:description"
-        content=".16 Tienda de Bebidas" />
+    <meta property="og:description" content=".16 Tienda de Bebidas" />
     <meta property="og:image" content="./assets/fondoblanco.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
@@ -33,71 +32,67 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    
-    <link rel="stylesheet" href="./stylos/style.css" />
+
+    <link rel="stylesheet" href="../stylos/style.css" />
 </head>
+
 <body>
+
+<body>
+
     <!-- Header -->
-    <nav class="navbar">
-        <div class="navSuperior">
-            <img class="logo" src="./assets/fondonegro.png" alt="logofondonegro">
-            <form class="buscador" id="buscador">
-                <input type="search" name="search" placeholder="Buscar por nombre, precio o categoría" id="search">
-                <button type="submit">Buscar</button>
-            </form>
-            <div class="carritoConNumero">
-                <a href="./pages/carrito.html"><i class="cart fas fa-cart-shopping fa-2x" style="color: #ffffff"></i>
-                <p id="numeroCarrito" class="numeroCarrito">0</p></a>
-            </div>
-        </div>
-
-        <div class="store-bebidas">
-            <div class="categoria_listado">
-                <a href="#" class="categoria_bebida" category="all">Todo</a>
-                <a href="#" class="categoria_bebida" category="Vino">Vinos</a>
-                <a href="#" class="categoria_bebida" category="Cerveza">Cervezas</a>
-                <a href="#" class="categoria_bebida" category="Gin">Gin</a>
-                <a href="#" class="categoria_bebida" category="Vodka">Vodka</a>
-                <a href="#" class="categoria_bebida" category="Gaseosa">Gaseosas</a>
-                <a href="#" class="categoria_bebida" category="Agua tónica">Agua tónica</a>
-            </div>
-        </div>
-
+    <nav class="navbarCarrito">
+        <a href="../index.html"><img class="logo" src="../assets/fondonegro.png" alt="logofondonegro"></a>
     </nav>
 
+    
+    <h1 class="tituloCarrito" id="tituloCarrito">Carrito de Compras</h1>
+    <h1 class="tituloCarritoVacio" id="tituloCarritoVacio">Todavía, no hay productos en tu carrito</h1>
+    
+    <div class="contenedorBebidasCarrito" id="contenedorBebidasCarrito"></div>
 
-    <div class="contenedorBebidas" id="contenedorBebidas">
+    <div class="totalesCarrito">     
+        <h3 class="unidadesCarrito" id="unidadesCarrito"></h3>
+        <h3 class="precioCarrito" id="precioCarrito"></h3>
     </div>
 
 
-    <!-- Footer -->
+    <div id="vaciar-continuar" class="vaciar-continuar">     
+        <button class="vaciarCarrito" id="vaciarCarrito">Vaciar carrito</button>
+        <button class="continuarCompra" id="continuarCompra">Finalizar compra</button>
+        <a href="../index.html">
+        <button class="bi bi-arrow-return-left">Agregar productos</button> 
+        </a>
+    </div>
+
+        <!-- Footer -->
     <footer class="bg-dark text-center text-white">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section: Social media -->
             <section class="mb-4">
                 <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="./404.html" role="button"><i
+                <a class="btn btn-outline-light btn-floating m-1" href="../404.html" role="button"><i
                         class="fab fa-facebook-f"></i></a>
 
                 <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="./404.html" role="button"><i
+                <a class="btn btn-outline-light btn-floating m-1" href="../404.html" role="button"><i
                         class="fab fa-twitter"></i></a>
 
                 <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="./404.html" role="button"><i
+                <a class="btn btn-outline-light btn-floating m-1" href="../404.html" role="button"><i
                         class="fab fa-google"></i></a>
 
                 <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="./404.html" role="button"><i
+                <a class="btn btn-outline-light btn-floating m-1" href="../404.html" role="button"><i
                         class="fab fa-instagram"></i></a>
 
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="./404.html" role="button"><i
+                <a class="btn btn-outline-light btn-floating m-1" href="../404.html" role="button"><i
                         class="fab fa-linkedin-in"></i></a>
 
                 <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="./404.html" role="button"><i
+                <a class="btn btn-outline-light btn-floating m-1" href="../404.html" role="button"><i
                         class="fab fa-github"></i></a>
             </section>
             <!-- Section: Social media -->
@@ -115,7 +110,10 @@
     <!-- Etiquetas script -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="./js/script.js"></script>
+    <script src="../js/carrito.js"></script>
 </body>
 
 </html>
+
+
+

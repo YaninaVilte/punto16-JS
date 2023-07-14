@@ -31,6 +31,16 @@ a {
 	width: 10%;
 }
 
+.navbarCarrito {
+	width: 100%;
+	background: black;
+	margin-bottom: 1rem;
+}
+
+.navbarCarrito img {
+	width: 10%;
+}
+
 .store-bebidas {
 	display: flex;
 	flex-wrap: wrap;
@@ -67,28 +77,18 @@ a {
 	border: 1px solid white;
 }
 
-
-.wrap {
-	width: 100%;
-	margin: auto;
-}
-
-
-.carritoNumero {
-	display: flex;
-	flex-direction: row;
-}
-
-.cantidadCarrito {
+.numeroCarrito {
+	position: relative;
+	margin-left: 3rem;
 	color: white;
 	font-size: 1.5rem;
 }
 
+.cart {
+	position: absolute;
+}
 
-
-
-.contenedorBebidas,
-.carrito {
+.contenedorBebidas {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -164,8 +164,8 @@ a {
 	margin-bottom: 0.2rem;
 }
 
-.agregarAlCarrito,
-.eliminardelcarrito {
+.agregarBebidaCarrito,
+.eliminarBebidaCarrito {
 	font-size: 0.9rem;
 }
 
@@ -213,7 +213,7 @@ button:active {
 	transform: translateY(0);
 }
 
-.carrito .card {
+.card {
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-auto-rows: 1fr;
@@ -221,7 +221,7 @@ button:active {
 	grid-template-rows: min-content;
 	gap: 0px 0px;
 	grid-template-areas:
-		"imagen nombre precio cantidad subtotal eliminardelcarrito";
+		"imagen nombre precio cantidad subtotal eliminarBebidaCarrito";
 	align-items: center;
 	margin-top: 1rem;
 	justify-content: center;
@@ -252,8 +252,8 @@ button:active {
 	grid-area: subtotal;
 }
 
-.eliminardelcarrito {
-	grid-area: eliminardelcarrito;
+.eliminarBebidaCarrito {
+	grid-area: eliminarBebidaCarrito;
 	margin-right: 3rem;
 }
 
@@ -328,4 +328,20 @@ button:active {
 	margin-bottom: 2rem;
 	background-color: black;
 	color: white;
+}
+
+.vaciar-continuar {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 4rem;
+	margin-right: 4rem;
+	margin-top: 2rem;
+	padding-bottom: 3rem;
+}
+
+.totalesCarrito {
+	text-align: right;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	margin-right: 20rem;
 }
